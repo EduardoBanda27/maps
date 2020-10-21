@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      Navegar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+   
+
+    <ion-searchbar animated></ion-searchbar>
+<hr>
+  <ion-item>
+      <agm-map
+      [latitude]="origin.lat"
+      [longitude]="origin.lng">
+        <agm-marker  [latitude]="origin.lat" [longitude]="origin.lng"></agm-marker>
+        <agm-marker *ngFor="let lugar of lugares"  [latitude]="lugar.lat" [longitude]="lugar.lng" (markerClick)=show_info(lugar)></agm-marker>
+     </agm-map>
+  </ion-item>
+
+</ion-content>

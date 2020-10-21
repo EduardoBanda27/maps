@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      Destino
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <agm-map [latitude]="origin.lat" [longitude]="origin.lng">
+            <agm-direction visible="show" [origin]="origin" [destination]="destination">
+            </agm-direction>
+          </agm-map>
+    </ion-item>
+</ion-content>
